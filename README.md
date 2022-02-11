@@ -14,9 +14,9 @@
 * Github: [@ganchentsang](https://github.com/ganchentsang)
 * LinkedIn: [@tenzinganchentsang](https://linkedin.com/in/tenzinganchentsang)
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+## Technologies Used
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>Javascript</li>
+</ul>
