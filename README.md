@@ -7,6 +7,10 @@
 
 > 2048 is a game where you combine numbered tiles in order to gain a higher numbered tile. In this game you start with two tiles, the lowest possible number available is two. Then you will play by combining the tiles with the same number to have a tile with the sum of the number on the two tiles.
 
+## Image
+
+<italic>In progress</italic>
+
 ## Author
 
 👤 **Tenzin Ganchentsang**
@@ -15,8 +19,13 @@
 * LinkedIn: [@tenzinganchentsang](https://linkedin.com/in/tenzinganchentsang)
 
 ## Technologies Used
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>Javascript</li>
-</ul>
+
+* HTML
+* CSS
+* Javascript
+
+## What's Next?
+
+* Adding an optional timer
+* Adding sound effects
+* Visually appealing colors
