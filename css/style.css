@@ -13,3 +13,18 @@ html {
   margin: 0 auto;
   background-color: #aaaca8;
 }
+/* add css for grid and individual cells */
+.grid {
+  width: 100%;
+  position: relative;
+}
+.cell {
+  width: 15vmin;
+  height: 15vmin;
+  margin: 2vmin 2vmin 0 0;
+  background-color: #c5c6be;
+  float: left;
+}
+.cell:nth-child(4n + 1) {
+  margin-left: 2vmin;
+}
