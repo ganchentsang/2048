@@ -9,7 +9,7 @@
 
 ## Image
 
-<italic>In progress</italic>
+*Coming soon to a README near you*
 
 ## Author
 
