@@ -30,6 +30,23 @@ const grid = {
     number.spawn()
     this.playable = true
   },
+  // intialized the randomEmptyCellIndex
+  randomEmptyCellIndex: function() {
+    // initialize emptyCells to an empty array
+    let emptyCells = []
+    // create a for loop that iterates through the cells length, essentially goes on forever until there are no more empty cells
+    for (let i = 0; i < this.cells.length; i++) {
+      // if there is null, then its going to push a cell into the current empty cell
+      if (this.cells[i].number === null) {
+        emptyCells.push(1)
+      }
+    }
+    // returns false when there's no more empty cells 
+    if (emptyCells.length === 0) {
+      return false
+    }
+    return emptyCells[Math.floor(Math.random() * emptyCells.length)]
+  }
 };
 
 export default grid;
