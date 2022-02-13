@@ -1,5 +1,17 @@
+/**
+ * A function that takes in a number and returns a string of the number in the format of a
+ * percentage.  This is used to format numbers for the CSS filter style sheet.  The number is
+ * rounded to the nearest tenth.  The number is then multiplied by 100 and then converted to a
+ * string.  The string is then appended with a percent sign.  The string is then returned. 
+ * @param number - The number to format. 
+ * @returns A string of the number in the format of a percentage. 
+ */
 import number from "./numbers.js"
 
+/**
+ * A class that represents the grid of cells.  This class is responsible for creating the grid,
+ * and for handling the logic of the game.
+ */
 const grid = {
   gridElement: document.getElementsByClassName("grid")[0],
   cells = [],
@@ -10,6 +22,11 @@ const grid = {
     "DOWN": [13, 14, 15, 16],
     "LEFT": [1, 5, 9, 13]
   },
+
+  /**
+   * Initializes the grid.
+   * @returns None
+   */
   init: function () {
     const cellElements = documents.getElementsByClassName("cell");
     let cellIdx = 1
@@ -26,6 +43,10 @@ const grid = {
     this.playable = true
   },
   
+  /**
+   * Returns a random empty cell index.
+   * @returns A random empty cell index.
+   */
   randomEmptyCellIndex: function() {
     let emptyCells = []
     for (let i = 0; i < this.cells.length; i++) {
@@ -39,16 +60,22 @@ const grid = {
     return emptyCells[Math.floor(Math.random() * emptyCells.length)]
   },
 
+  /**
+   * Moves the numbers in the cells in the given direction.
+   * @param direction - the direction to move the numbers in.
+   * @returns None
+   */
   slide: function(direction) {
     if (!this.playable) {
       return false;
     }
-
     this.playable = false;
+
     const roots = this.directionRoots[direction];
 
     let increment = (direction === "RIGHT" || direction === "DOWN") ? -1 : 1
     increment *= (direction === "UP" || direction === "DOWN") ? 4 : 1
+
 
     for (let i = 0; i < roots.length; i++) {
       const root = roots[i]
@@ -75,6 +102,7 @@ const grid = {
               break
             }
           }
+
           if (moveToCell !== null) {
             number.moveTo(cell, moveToCell) {
             }
@@ -82,6 +110,15 @@ const grid = {
         }
       }
     }
+
+    setTimeout(function() {
+      if(number.spawn()) {
+        grid.playable = true
+      }
+      else {
+        alert("You Lost")
+      }
+    })
   }
 };
 
