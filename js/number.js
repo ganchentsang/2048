@@ -36,20 +36,26 @@ const number = {
     const number = fromCell.number;
 
     if (toCell.number === null) {
+      // target cell is empty fill with number
       number.style.top = `${toCell.top}px`;
       number.style.left = `${toCell.left}px`;
 
       toCell.number = number;
       fromCell.number = null;
     } else if (number.dataset.value === toCell.number.dataset.value) {
+      // target cell has same number
+      // merge both cell
+
       number.style.top = `${toCell.top}px`;
       number.style.left = `${toCell.left}px`;
       number.style.opacity = "0";
 
+      // remove number DOM element after transition
       setTimeout(() => {
         grid.gridElement.removeChild(number);
       }, 500);
 
+      // double target cell's number
       const newNumberValue = toCell.number.dataset.value * 2;
       toCell.number.dataset.value = newNumberValue;
       toCell.number.innerText = newNumberValue;
