@@ -23,7 +23,7 @@ Contributions, issues, and feature requests are welcome!<br />Feel free to check
 
 ## Image
 
-![pcture of game](https://imgur.com/EgOjNJg)
+![pcture of game](/assets/picture-of-game.png)
 
 ## Technologies Used
 
