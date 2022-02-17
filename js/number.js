@@ -1,68 +1,62 @@
-/**
- * Import the grid.js file and add it to the page.
- * @returns None
- */
 import grid from "./grid.js";
 
-/**
- * Gets all the number elements on the page.
- * @returns None
- */
 const number = {
   numbers: [],
   getElements: function () {
     const numberElements = document.getElementsByClassName("number");
+
     for (let numberElement of numberElements) {
       this.numbers.push(numberElement);
     }
   },
-
-  /**
-   * Spawn a new number on the grid.
-   * @returns True if a new number was spawned, false otherwise.
-   */
   spawn: function () {
     const emptyCellIndex = grid.randomEmptyCellIndex();
+
     if (emptyCellIndex === false) {
       return false;
     }
+
     const numberElement = document.createElement("div");
     const numberValue = 2;
+
     numberElement.innerText = numberValue;
     numberElement.dataset.value = numberValue;
     numberElement.classList.add("number");
+
     numberElement.style.top = `${grid.cells[emptyCellIndex].top}px`;
     numberElement.style.left = `${grid.cells[emptyCellIndex].left}px`;
+
     grid.cells[emptyCellIndex].number = numberElement;
+
     grid.gridElement.append(numberElement);
+
     return true;
   },
-  moveTo: function(fromCell, toCell) {
-    const number = fromCell.number
+  moveTo: function (fromCell, toCell) {
+    const number = fromCell.number;
 
     if (toCell.number === null) {
-      number.style.top = `${toCell.top}px`
-      number.style.left = `${toCell.left}px`
+      number.style.top = `${toCell.top}px`;
+      number.style.left = `${toCell.left}px`;
 
-      toCell.number = number
-      fromCell.number = null
-    }
-    else if (number.dataset.value === toCell.number.dataset.value) {
-      number.style.top = `${toCell.top}px`
-      number.style.left = `${toCell.left}px`
-      number.style.opacity = "0"
+      toCell.number = number;
+      fromCell.number = null;
+    } else if (number.dataset.value === toCell.number.dataset.value) {
+      number.style.top = `${toCell.top}px`;
+      number.style.left = `${toCell.left}px`;
+      number.style.opacity = "0";
 
       setTimeout(() => {
-        grid.gridElement.removeChild(number)
-      }, 500)
+        grid.gridElement.removeChild(number);
+      }, 500);
 
-      const newNumberValue = toCell.number.dataset.value * 2
-      toCell.number.dataset.value = newNumberValue
-      toCell.number.innerText = newNumberValue
+      const newNumberValue = toCell.number.dataset.value * 2;
+      toCell.number.dataset.value = newNumberValue;
+      toCell.number.innerText = newNumberValue;
 
-      fromCell.number = null
+      fromCell.number = null;
     }
-  }
+  },
 };
 
 export default number;
