@@ -23,7 +23,7 @@ Contributions, issues, and feature requests are welcome!<br />Feel free to check
 
 ## Image
 
-*Coming soon to a README near you*
+![pcture of game](https://imgur.com/EgOjNJg)
 
 ## Technologies Used
 
