@@ -6,6 +6,12 @@ html {
   overflow: hidden;
 }
 
+/* control the styling for the text above grid */
+.introduction-h3 {
+  color: gray;
+  text-align: center;
+}
+
 /* implement square playing area */
 .wrapper {
   width: 70vmin;
@@ -39,7 +45,7 @@ html {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
   line-height: 15vmin;
-  background-color: #f44336;
+  background-color: purple;
   color: white;
   transition: all 0.3s;
 }

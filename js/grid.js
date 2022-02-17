@@ -50,7 +50,6 @@ const grid = {
     if (!this.playable) {
       return false;
     }
-
     // set playable to false to prevent continous slides
     this.playable = false;
 
@@ -75,7 +74,6 @@ const grid = {
 
         if (cell.number !== null) {
           let moveToCell = null;
-
           // check if cells below(to root) this cell empty or has same number
           // to decide to move or stay
           // k starts from j-1 first cell below j
@@ -99,14 +97,12 @@ const grid = {
               break;
             }
           }
-
           if (moveToCell !== null) {
             number.moveTo(cell, moveToCell);
           }
         }
       }
     }
-
     // spawn a new number and make game playable
     setTimeout(function () {
       if (number.spawn()) {
