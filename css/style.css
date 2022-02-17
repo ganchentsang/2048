@@ -35,6 +35,8 @@ html {
   width: 15vmin;
   font-size: 5vmin;
   font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   text-align: center;
   line-height: 15vmin;
   background-color: #f44336;

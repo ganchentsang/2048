@@ -14,6 +14,9 @@
 * Github: [@ganchentsang](https://github.com/ganchentsang)
 * LinkedIn: [@tenzinganchentsang](https://linkedin.com/in/tenzinganchentsang)
 
+## Link to Play
+https://ganchentsang.github.io/2048/
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ganchentsang/2048/issues). 
