@@ -2,7 +2,11 @@ import grid from "./js/grid.js";
 
 grid.init();
 
-document.addEventListener("keyDown", function (evt) {
+const bodyElement = document.querySelector("body")
+
+let direction;
+
+bodyElement.addEventListener("keydown", function (evt) {
   switch (evt.key) {
     case "ArrowLeft":
       direction = "LEFT";
