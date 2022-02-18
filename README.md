@@ -23,7 +23,7 @@ Contributions, issues, and feature requests are welcome!<br />Feel free to check
 
 ## Image
 
-![pcture of game](/assets/picture-of-game.png)
+![pcture of game](/assets/picture-of-new-game.png)
 
 ## Technologies Used
 
